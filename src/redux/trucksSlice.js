@@ -1,12 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAll } from "./fetchTrucks";
+import { fetchAll, fetchByID } from "./fetchTrucks";
 
 const trucksState = {
-  trucks: {
-    items: [],
-    error: null,
-    isLoading: false,
-  },
+  items: [],
+  error: null,
+  isLoading: false,
+  infoAboutCard: {},
 };
 
 const trucksSlice = createSlice({
@@ -15,16 +14,28 @@ const trucksSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchAll.pending, (state) => {
-        state.trucks.isLoading = true;
-        state.trucks.error = null;
+        state.isLoading = true;
+        state.error = null;
       })
       .addCase(fetchAll.fulfilled, (state, { payload }) => {
-        state.trucks.isLoading = false;
-        state.trucks.items = payload;
+        state.isLoading = false;
+        state.items = payload;
       })
       .addCase(fetchAll.rejected, (state, { payload }) => {
-        state.trucks.isLoading = false;
-        state.trucks.error = payload;
+        state.isLoading = false;
+        state.error = payload;
+      })
+      .addCase(fetchByID.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchByID.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.infoAboutCard = payload;
+      })
+      .addCase(fetchByID.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = payload;
       });
   },
 });

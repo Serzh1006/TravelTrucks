@@ -1,0 +1,11 @@
+.navigation {
+  display: flex;
+  gap: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.activePage {
+  color: var(--button-hover);
+}

@@ -1,0 +1,130 @@
+.itemWrap {
+  display: flex;
+  gap: 24px;
+  width: 888px;
+  min-height: 368px;
+  padding: 24px;
+  border: 1px solid var(--gray-light);
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imgBox {
+  min-width: 292px;
+  min-height: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 8px;
+  line-height: 1.33;
+}
+
+.price {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+.raiting {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.5;
+}
+
+.wrapLocation {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.boxLocation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.location {
+  line-height: 1.5;
+}
+
+.wrapCategories {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  border-radius: 100px;
+  padding: 12px 18px;
+  background-color: var(--badges);
+}
+
+.listCategories {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.categories {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.description {
+  width: 525px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.titlePriceBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnLike {
+  border: none;
+  background-color: transparent;
+}
+
+.btnShowMore {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 24px;
+  letter-spacing: -0.01em;
+  border-radius: 200px;
+  padding: 16px 40px;
+  color: var(--white);
+  background-color: var(--button);
+  transition: background-color 250ms ease-in-out;
+}
+
+.btnShowMore:hover,
+.btnShowMore:focus {
+  background-color: var(--button-hover);
+}

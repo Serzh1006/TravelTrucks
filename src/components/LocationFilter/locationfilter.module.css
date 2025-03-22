@@ -1,0 +1,38 @@
+.boxLocation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.labelLocation {
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.textLocation {
+  position: relative;
+  border-radius: 12px;
+  padding-left: 48px;
+  width: 360px;
+  height: 56px;
+  outline: none;
+  border: none;
+  line-height: 1.5;
+  color: var(--gray);
+  background-color: var(--inputs);
+}
+
+.textLocation:focus {
+  color: var(--main);
+}
+
+.textLocation:focus + svg path {
+  fill: var(--main);
+}
+
+.boxLocation svg {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+}
