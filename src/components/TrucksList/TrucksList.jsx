@@ -1,6 +1,6 @@
 import { visibleTrucks } from "../../redux/selectors";
 import { useSelector } from "react-redux";
-import TruckItem from "../TruckItem/Truckitem";
+import TruckItem from "../TruckItem/TruckItem";
 import css from "./truckslist.module.css";
 
 const TrucksList = () => {
