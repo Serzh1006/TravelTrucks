@@ -1,0 +1,74 @@
+.titlePriceBox2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 48px;
+}
+.title2 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 8px;
+  line-height: 1.33;
+}
+
+.price2 {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.raiting2 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.5;
+}
+
+.wrapLocation2 {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.boxLocation2 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.location2 {
+  line-height: 1.5;
+}
+
+.galleryListTruck {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.boxImgGallery {
+  width: 292px;
+  height: 312px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: gray;
+}
+
+.galleryListTruck img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.descriptionDetail {
+  margin-top: 28px;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  color: var(--text);
+}

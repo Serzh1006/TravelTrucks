@@ -1,19 +1,55 @@
 import { useParams } from "react-router-dom";
 import { fetchByID } from "../../redux/fetchTrucks";
-import { useEffect } from "react";
-import { selectInfoAboutCard } from "../../redux/selectors";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import GalleryTruck from "../../components/GalleryTruck/GalleryTruck";
+import Subscribe from "../../components/Subscribe/Subscribe";
+import css from "./catalogdetails.module.css";
 
 const CatalogDetails = () => {
   const { id } = useParams();
-  const cardData = useSelector(selectInfoAboutCard);
-  const dispatch = useDispatch();
+  const [truckInfo, setTruckInfo] = useState({});
 
   useEffect(() => {
-    dispatch(fetchByID(id));
-  }, [dispatch, id]);
+    try {
+      fetchByID(id).then((data) => setTruckInfo(data));
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, [id]);
 
-  return <div>CatalogDetails</div>;
+  return (
+    <div>
+      <GalleryTruck data={truckInfo} />
+      <div className="container">
+        <div className={css.linksWrap}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? `${css.linksIntoCatalog} ${css.active}`
+                : css.linksIntoCatalog
+            }
+            to={"features"}
+          >
+            Features
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? `${css.linksIntoCatalog} ${css.active}`
+                : css.linksIntoCatalog
+            }
+            to={"reviews"}
+          >
+            Reviews
+          </NavLink>
+        </div>
+      </div>
+      <Subscribe />
+      <Outlet context={truckInfo} />
+    </div>
+  );
 };
 
 export default CatalogDetails;

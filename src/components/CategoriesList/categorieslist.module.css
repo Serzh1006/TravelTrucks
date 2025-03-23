@@ -1,0 +1,22 @@
+.wrapCategories {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  border-radius: 100px;
+  padding: 12px 18px;
+  background-color: var(--badges);
+}
+
+.listCategories {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.categories {
+  font-weight: 500;
+  line-height: 1.5;
+}

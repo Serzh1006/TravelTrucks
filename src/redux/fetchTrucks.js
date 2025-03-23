@@ -15,14 +15,11 @@ export const fetchAll = createAsyncThunk(
   }
 );
 
-export const fetchByID = createAsyncThunk(
-  "trucks/fetchID",
-  async (id, thunkAPI) => {
-    try {
-      const { data } = await axios.get(`/campers/${id}`);
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
+export const fetchByID = async (id) => {
+  try {
+    const { data } = await axios.get(`/campers/${id}`);
+    return data;
+  } catch (error) {
+    return error.message;
   }
-);
+};
