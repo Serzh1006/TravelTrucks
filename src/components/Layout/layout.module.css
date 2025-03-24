@@ -8,3 +8,12 @@
   height: 72px;
   background-color: var(--inputs);
 }
+
+.loader {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 100px;
+  color: tomato;
+  text-align: center;
+}

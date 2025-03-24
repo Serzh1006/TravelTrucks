@@ -6,8 +6,7 @@ const CategoriesList = ({ dataObj }) => {
       {dataObj.AC && (
         <li>
           <div className={css.wrapCategories}>
-            <img src="../../img/wind.svg" alt={dataObj.name} />
-            {/* <svg
+            <svg
               width="20"
               height="20"
               viewBox="0 0 32 32"
@@ -25,7 +24,7 @@ const CategoriesList = ({ dataObj }) => {
                   <rect width="32" height="32" fill="white" />
                 </clipPath>
               </defs>
-            </svg> */}
+            </svg>
             <p className={css.categories}>{"AC"}</p>
           </div>
         </li>

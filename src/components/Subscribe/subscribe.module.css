@@ -1,0 +1,102 @@
+.formWrap {
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  padding: 44px;
+  width: 641px;
+  height: 588px;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 527px;
+}
+
+.inputForm,
+.inputFormComment {
+  border-radius: 12px;
+  padding-left: 18px;
+  width: 100%;
+  height: 60px;
+  outline: none;
+  border: none;
+  background-color: var(--inputs);
+}
+
+.inputForm::placeholder,
+.inputFormComment::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.inputForm:focus::placeholder {
+  color: var(--main);
+}
+
+.inputFormComment {
+  width: 100%;
+  height: 110px;
+  padding-top: 18px;
+}
+
+.addBtn {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  border-radius: 200px;
+  width: 166px;
+  height: 56px;
+  border: none;
+  padding: 16px 60px;
+  color: var(--white);
+  background-color: var(--button);
+  transition: background-color 250ms ease-in-out;
+}
+
+.addBtn:hover,
+.addBtn:focus {
+  background-color: var(--button-hover);
+}
+
+.errorMessage,
+.errorMessage2,
+.errorMessage3 {
+  font-style: italic;
+  position: absolute;
+  top: 40px;
+  left: 33px;
+  font-size: 14px;
+  color: red;
+  text-decoration: dashed;
+}
+
+.errorMessage2 {
+  top: 117px;
+  left: 33px;
+}
+.errorMessage3 {
+  top: 188px;
+  left: 33px;
+}
+
+.titleForm {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.textForm {
+  line-height: 1.5;
+  color: var(--gray);
+  margin-bottom: 24px;
+}

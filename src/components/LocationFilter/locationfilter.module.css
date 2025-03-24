@@ -33,6 +33,6 @@
 
 .boxLocation svg {
   position: absolute;
-  bottom: 18px;
+  top: 50px;
   left: 20px;
 }

@@ -66,7 +66,7 @@ const Layout = () => {
         <Navigation />
       </header>
       <main>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className={css.loader}>Loading...</div>}>
           <Outlet />
         </Suspense>
       </main>

@@ -1,0 +1,45 @@
+.reviewsWrapperPrimary {
+  width: 631px;
+  padding-top: 56px;
+}
+
+.wrapName {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nameRaitingWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.boxReviews {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.listReviews {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.letterWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--badges);
+}
+
+.firstLetter {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--button);
+}

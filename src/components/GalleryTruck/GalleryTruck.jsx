@@ -2,8 +2,6 @@ import { nanoid } from "nanoid";
 import css from "./gallerytruck.module.css";
 
 const GalleryTruck = ({ data }) => {
-  console.log(data);
-
   return (
     <>
       <section>
@@ -67,8 +65,6 @@ const GalleryTruck = ({ data }) => {
           <p className={css.descriptionDetail}>{data?.description}</p>
         </div>
       </section>
-
-      <section></section>
     </>
   );
 };

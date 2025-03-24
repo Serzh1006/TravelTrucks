@@ -46,8 +46,12 @@ const CatalogDetails = () => {
           </NavLink>
         </div>
       </div>
-      <Subscribe />
-      <Outlet context={truckInfo} />
+      <div className="container">
+        <div className={css.outletWrap}>
+          <Outlet context={truckInfo} />
+          <Subscribe />
+        </div>
+      </div>
     </div>
   );
 };
