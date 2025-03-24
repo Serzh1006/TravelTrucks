@@ -1,4 +1,3 @@
-import { ReactComponent as Icon } from "../../img/wind.svg";
 import css from "./categorieslist.module.css";
 
 const CategoriesList = ({ dataObj }) => {
@@ -7,7 +6,7 @@ const CategoriesList = ({ dataObj }) => {
       {dataObj.AC && (
         <li>
           <div className={css.wrapCategories}>
-            <Icon width={20} height={20} />
+            <img src="../../img/wind.svg" alt={dataObj.name} />
             {/* <svg
               width="20"
               height="20"
