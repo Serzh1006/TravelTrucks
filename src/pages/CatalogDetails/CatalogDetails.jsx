@@ -3,6 +3,7 @@ import { fetchByID } from "../../redux/fetchTrucks";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import iziToast from "izitoast";
 import GalleryTruck from "../../components/GalleryTruck/GalleryTruck";
 import Subscribe from "../../components/Subscribe/Subscribe";
 import css from "./catalogdetails.module.css";
@@ -15,7 +16,11 @@ const CatalogDetails = () => {
     try {
       fetchByID(id).then((data) => setTruckInfo(data));
     } catch (error) {
-      console.log(error.message);
+      iziToast.error({
+        title: "Error",
+        message: error.message,
+        position: "topRight",
+      });
     }
   }, [id]);
 

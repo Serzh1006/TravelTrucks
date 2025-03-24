@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import css from "./notfoundpage.module.css";
 
 const NotFoundPage = () => {
   return (
-    <>
+    <div className={css.notfound}>
       <h1>404</h1>
-      <Link to={"/"}>Home page</Link>
-    </>
+      <Link className={css.homelink} to={"/"}>
+        Home Page
+      </Link>
+    </div>
   );
 };
 

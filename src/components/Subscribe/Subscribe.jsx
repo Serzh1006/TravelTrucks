@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
 import * as yup from "yup";
+import iziToast from "izitoast";
 import css from "./subscribe.module.css";
 
 const Subscribe = () => {
@@ -27,7 +28,11 @@ const Subscribe = () => {
   });
 
   const handleSubmit = (_, actions) => {
-    alert("The reservation was successful!");
+    iziToast.success({
+      title: "OK",
+      message: "The reservation was successful!",
+      position: "topRight",
+    });
     actions.resetForm();
   };
 
