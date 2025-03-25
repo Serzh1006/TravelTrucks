@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
 import * as yup from "yup";
 import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 import css from "./subscribe.module.css";
 
 const Subscribe = () => {

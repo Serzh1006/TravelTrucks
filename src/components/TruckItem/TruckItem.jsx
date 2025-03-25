@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { selectFavorites } from "../../redux/selectors";
 import { useDispatch, useSelector } from "react-redux";
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 import CategoriesList from "../CategoriesList/CategoriesList";
 import { addFavCard, removeFavCard } from "../../redux/favoritesSlice";
 import css from "../TruckItem/truckitem.module.css";
@@ -22,11 +24,21 @@ const TruckItem = ({ data, idCard }) => {
     if (!isFavorite) {
       setIsFavorite(true);
       dispatch(addFavCard(id));
+      iziToast.success({
+        title: "OK",
+        message: "Added to save!",
+        position: "topRight",
+      });
       return;
     }
     if (isFavorite) {
       setIsFavorite(false);
       dispatch(removeFavCard(id));
+      iziToast.success({
+        title: "OK",
+        message: "Remove from save!",
+        position: "topRight",
+      });
       return;
     }
   };
@@ -42,7 +54,7 @@ const TruckItem = ({ data, idCard }) => {
             <div className={css.titlePriceBox}>
               <h2 className={css.title}>{data.name}</h2>
               <p className={css.price}>
-                €{data.price}
+                €{`${data.price},00`}
                 <button
                   className={css.btnLike}
                   type="button"
